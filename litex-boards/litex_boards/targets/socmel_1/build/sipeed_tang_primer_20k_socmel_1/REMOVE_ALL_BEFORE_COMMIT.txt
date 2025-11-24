@@ -1,0 +1,3 @@
+Files and folders are recreated when SOC is built. No need to have these in git repository.
+
+(TODO: git ignore) 

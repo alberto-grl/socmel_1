@@ -1,0 +1,2 @@
+#!/bin/bash
+selected=$(ls ~/litex_scripts/|rofi -dmenu -p "Run: ")&&bash ~/litex_scripts/$selected

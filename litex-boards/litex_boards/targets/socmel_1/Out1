@@ -1,0 +1,529 @@
+>>> XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXUsing custom platform with dock = standard
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libc»
+make: Nessuna operazione da eseguire per «all».
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libc»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libcompiler_rt»
+make: Nessuna operazione da eseguire per «all».
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libcompiler_rt»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libbase»
+ CC       console.o
+ CC       system.o
+ CC       memtest.o
+ CC       uart.o
+ CC       spiflash.o
+ CC       i2c.o
+ CC       isr.o
+ CC       hyperram.o
+ AR       libbase.a
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libbase»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libfatfs»
+make: Nessuna operazione da eseguire per «all».
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libfatfs»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitespi»
+ CC       spiflash.o
+ CC       spiram.o
+ AR       liblitespi.a
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitespi»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitedram»
+ CC       sdram.o
+ CC       bist.o
+ CC       sdram_dbg.o
+ CC       sdram_spd.o
+ CC       utils.o
+ CC       accessors.o
+ AR       liblitedram.a
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitedram»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libliteeth»
+ CC       udp.o
+ CC       mdio.o
+ AR       libliteeth.a
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/libliteeth»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitesdcard»
+ CC       sdcard.o
+ CC       spisdcard.o
+ AR       liblitesdcard.a
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitesdcard»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitesata»
+ CC       sata.o
+ AR       liblitesata.a
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/liblitesata»
+make: ingresso nella directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/bios»
+ CC       boot.o
+ CC       cmd_bios.o
+ CC       cmd_mem.o
+ CC       cmd_boot.o
+ CC       cmd_i2c.o
+ CC       cmd_spiflash.o
+ CC       cmd_litedram.o
+ CC       cmd_liteeth.o
+ CC       cmd_litesdcard.o
+ CC       cmd_litesata.o
+ CC       sim_debug.o
+ CC       main.o
+ CC       crt0.o
+ CC       bios.elf
+chmod -x bios.elf
+ OBJCOPY  bios.bin
+chmod -x bios.bin
+python3 -m litex.soc.software.crcfbigen bios.bin --little
+python3 -m litex.soc.software.memusage bios.elf /home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/bios/../include/generated/regions.ld riscv64-unknown-elf
+
+ROM usage: 40.87KiB 	(31.93%)
+RAM usage: 2.16KiB 	(26.95%)
+
+rm crt0.o
+make: uscita dalla directory «/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/software/bios»
+*** GOWIN Tcl Command Line Console  *** 
+current device: GW2A-18C  GW2A-LV18PG256C8/I7
+add new file: "sipeed_tang_primer_20k.cst"
+add new file: "sipeed_tang_primer_20k.sdc"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/myperiph.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/sdr_periph.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/CIC.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/NCO.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/pt8211_drive.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/SinCos.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/gowin_mult.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/gowin_mult1.v"
+add new file: "/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v"
+add new file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v"
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/myperiph.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/sdr_periph.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/CIC.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/NCO.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/pt8211_drive.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/SinCos.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/gowin_mult.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/gowin_mult1.v'
+Analyzing Verilog file '/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v'
+Analyzing Verilog file '/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v'
+Compiling module 'sipeed_tang_primer_20k'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":21)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_basesoc_adr_burst' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":690)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_basesoc_ram_bus_err' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":699)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_ram_adr_burst' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":733)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_ram_bus_ram_bus_err' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":741)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_rx_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":761)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_rx_source_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":762)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_uart_rx_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":843)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_uart_tx_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":901)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_uart_tx_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":902)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_uart_tx_fifo_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":903)
+WARN  (EX3780) : Using initial value of 'basesoc_basesoc_vexriscv' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":942)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_rx_depacketizer_sink_d_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":999)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_rx_depacketizer_sr_shift_leftover' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1031)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_rx_source_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1045)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_rx_source_source_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1046)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_table_cache_clear_enable' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1054)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_table_cache_enable' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1057)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_table_sink_ready' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1119)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_table_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1121)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_table_source_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1122)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_tx_packetizer_sink_payload_data' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1158)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_tx_packetizer_sink_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1159)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_tx_packetizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1163)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_tx_packetizer_source_payload_ethernet_type' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1170)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_tx_packetizer_source_payload_sender_mac' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1172)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_arp_tx_packetizer_source_payload_target_mac' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1173)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_echo_param_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1245)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_echo_param_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1246)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_echo_param_fifo_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1247)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_echo_payload_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1296)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_echo_payload_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1297)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_rx_depacketizer_sink_d_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1409)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_rx_depacketizer_sr_shift_leftover' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1436)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_rx_source_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1448)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_tx_packetizer_sink_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1483)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_tx_packetizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1487)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_tx_packetizer_source_param_ip_address' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1492)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_tx_packetizer_source_param_length' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1493)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_icmp_tx_packetizer_source_param_protocol' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1494)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_depacketizer_sink_d_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1603)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_depacketizer_sr_shift_leftover' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1635)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum0' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1637)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum1' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1638)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum2' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1639)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum3' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1640)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum4' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1641)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum5' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1642)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum6' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1643)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum7' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1644)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum8' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1645)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum9' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1646)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_liteethipv4checksum_r' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1651)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_rx_source_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1684)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum0' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1695)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum1' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1696)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum2' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1697)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum3' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1698)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum4' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1699)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum5' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1700)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum6' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1701)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum7' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1702)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum8' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1703)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_liteethipv4checksum_r' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1708)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_packetizer_sink_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1755)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_packetizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1759)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_packetizer_source_payload_ethernet_type' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1766)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_packetizer_source_payload_sender_mac' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1768)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_ip_tx_packetizer_source_payload_target_mac' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1769)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_mac_core_liteethmaccrc32checker_syncfifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":1971)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_mac_core_rx_preamble_preamble' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2022)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_mac_core_tx_preamble_preamble' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2230)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_mac_depacketizer_sink_d_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2281)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_mac_depacketizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2290)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_mac_depacketizer_sr_shift_leftover' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2305)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_mac_packetizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2333)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_rx_depacketizer_sink_d_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2365)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_rx_depacketizer_sr_shift_leftover' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2392)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_rx_source_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2404)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_tx_packetizer_sink_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2437)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_tx_packetizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2441)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_tx_packetizer_source_param_ip_address' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2446)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_tx_packetizer_source_param_length' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2447)
+WARN  (EX3780) : Using initial value of 'basesoc_ethcore_tx_packetizer_source_param_protocol' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2448)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_liteethetherbonewishbonemaster_bus_bte' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2510)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_liteethetherbonewishbonemaster_bus_cti' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2511)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_liteethetherbonewishbonemaster_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2531)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_probe_param_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2570)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_probe_param_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2571)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_probe_param_fifo_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2572)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_probe_sink_sink_first1' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2637)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_depacketizer_sink_d_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2715)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_depacketizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2732)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2787)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_addr_size' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2792)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_dst_port' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2793)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_ip_address' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2794)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_length' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2795)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_nr' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2796)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_pf' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2797)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_port_size' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2798)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_pr' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2799)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_packetizer_source_param_src_port' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2800)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_receiver_param_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2846)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_receiver_param_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2847)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_receiver_param_fifo_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2848)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_receiver_payload_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2903)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_receiver_payload_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2904)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_receiver_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":2960)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_param_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3009)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_param_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3010)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_param_fifo_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3011)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_payload_fifo_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3056)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_payload_fifo_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3057)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3103)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_param_bca' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3105)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_param_cyc' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3107)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_param_rca' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3108)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_param_rff' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3110)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_param_wca' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3111)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_param_wff' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3113)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_record_sender_source_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3115)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_rx_depacketizer_sink_d_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3306)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_rx_depacketizer_sr_shift_leftover' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3336)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_rx_source_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3349)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_rx_source_source_param_addr_size' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3351)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_rx_source_source_param_port_size' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3357)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_rx_source_source_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3361)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_tx_packetizer_sink_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3524)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_tx_packetizer_source_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3528)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_tx_packetizer_source_param_dst_port' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3533)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_tx_packetizer_source_param_ip_address' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3534)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_tx_packetizer_source_param_length' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3535)
+WARN  (EX3780) : Using initial value of 'basesoc_etherbone_tx_packetizer_source_param_src_port' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3536)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine0_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3677)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine0_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3691)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine0_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3692)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine1_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3773)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine1_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3787)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine1_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3788)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine2_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3869)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine2_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3883)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine2_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3884)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine3_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3965)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine3_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3979)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine3_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":3980)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine4_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4061)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine4_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4075)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine4_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4076)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine5_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4157)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine5_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4171)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine5_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4172)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine6_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4253)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine6_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4267)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine6_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4268)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine7_replace' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4349)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine7_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4363)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_bankmachine7_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4364)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_choose_cmd_want_cmds' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4422)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_choose_cmd_want_reads' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4423)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_choose_cmd_want_writes' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4424)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_choose_req_want_activates' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4439)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_choose_req_want_cmds' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4440)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_cmd_payload_is_read' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4448)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_cmd_payload_is_write' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4449)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_csr_dfi_p0_act_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4454)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_csr_dfi_p1_act_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4470)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_dfi_p0_act_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4486)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_dfi_p1_act_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4502)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_act_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4520)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_address' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4521)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_bank' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4522)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_cas_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4523)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_cke' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4524)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_cs_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4525)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_odt' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4526)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_ras_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4527)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_rddata_en' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4529)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_reset_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4531)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_we_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4532)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_wrdata' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4533)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_wrdata_en' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4534)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p0_wrdata_mask' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4535)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_act_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4536)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_address' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4537)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_bank' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4538)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_cas_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4539)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_cke' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4540)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_cs_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4541)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_odt' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4542)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_ras_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4543)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_rddata_en' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4545)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_reset_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4547)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_we_n' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4548)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_wrdata' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4549)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_wrdata_en' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4550)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_p1_wrdata_mask' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4551)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_ext_dfi_sel' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4552)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_nop_a' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4647)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_nop_ba' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4648)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_phaseinjector0_command_issue_w' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4656)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_phaseinjector1_command_issue_w' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4679)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_steerer2' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4744)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_steerer3' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4745)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_steerer4' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4746)
+WARN  (EX3780) : Using initial value of 'basesoc_sdram_steerer5' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4747)
+WARN  (EX3780) : Using initial value of 'basesoc_wb_sdram_err' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":4802)
+WARN  (EX3780) : Using initial value of 'builder_interface0_err' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5214)
+WARN  (EX3780) : Using initial value of 'builder_locked0' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5366)
+WARN  (EX3780) : Using initial value of 'builder_locked1' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5367)
+WARN  (EX3780) : Using initial value of 'builder_locked2' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5368)
+WARN  (EX3780) : Using initial value of 'builder_locked3' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5369)
+WARN  (EX3780) : Using initial value of 'builder_locked4' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5370)
+WARN  (EX3780) : Using initial value of 'builder_locked5' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5371)
+WARN  (EX3780) : Using initial value of 'builder_locked6' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5372)
+WARN  (EX3780) : Using initial value of 'builder_locked7' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5373)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiirx_converter_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5513)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiirx_delay_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5574)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiirx_delay_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5575)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiirx_rst' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5584)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiirx_source_source_payload_error' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5593)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiirx_source_source_payload_last_be' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5594)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiitx_converter_sink_first' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5608)
+WARN  (EX3780) : Using initial value of 'ethphy_liteethphyrmiitx_converter_sink_last' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5609)
+WARN  (EX3780) : Using initial value of 'ethphy_r' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5636)
+WARN  (EX3780) : Using initial value of 'gw2ddrphy_burstdet_clr_w' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":5767)
+WARN  (EX3780) : Using initial value of 'gw2ddrphy_rdly_dq_bitslip_rst_w' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":6013)
+WARN  (EX3780) : Using initial value of 'gw2ddrphy_rdly_dq_bitslip_w' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":6015)
+WARN  (EX3780) : Using initial value of 'gw2ddrphy_rdly_dq_inc_w' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":6019)
+WARN  (EX3780) : Using initial value of 'gw2ddrphy_rdly_dq_rst_w' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":6023)
+WARN  (EX3780) : Using initial value of 'por_rst' since it is never assigned("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":6055)
+Extracting RAM for identifier 'rom'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":20852)
+Extracting RAM for identifier 'sram'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":20867)
+Extracting RAM for identifier 'mem'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":20890)
+Extracting RAM for identifier 'storage'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":20906)
+Extracting RAM for identifier 'storage_1'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":20927)
+Extracting RAM for identifier 'storage_2'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23183)
+Extracting RAM for identifier 'storage_3'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23201)
+Extracting RAM for identifier 'storage_4'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23219)
+Extracting RAM for identifier 'storage_5'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23237)
+Extracting RAM for identifier 'storage_6'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23255)
+Extracting RAM for identifier 'storage_7'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23273)
+Extracting RAM for identifier 'storage_8'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23291)
+Extracting RAM for identifier 'storage_9'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23309)
+Extracting RAM for identifier 'tag_mem'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23326)
+Extracting RAM for identifier 'storage_10'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23344)
+Extracting RAM for identifier 'storage_11'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23364)
+Extracting RAM for identifier 'storage_12'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23382)
+Extracting RAM for identifier 'mem_1'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23402)
+Extracting RAM for identifier 'storage_13'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23420)
+Extracting RAM for identifier 'storage_14'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23441)
+Extracting RAM for identifier 'storage_15'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23462)
+Extracting RAM for identifier 'storage_16'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23482)
+Extracting RAM for identifier 'storage_17'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23502)
+Extracting RAM for identifier 'storage_18'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23520)
+Extracting RAM for identifier 'storage_19'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23541)
+Extracting RAM for identifier 'storage_20'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23562)
+Extracting RAM for identifier 'storage_21'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23583)
+Extracting RAM for identifier 'data_mem_grain0'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23735)
+Extracting RAM for identifier 'data_mem_grain1'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23749)
+Extracting RAM for identifier 'data_mem_grain2'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23763)
+Extracting RAM for identifier 'data_mem_grain3'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23777)
+Extracting RAM for identifier 'data_mem_grain4'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23791)
+Extracting RAM for identifier 'data_mem_grain5'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23805)
+Extracting RAM for identifier 'data_mem_grain6'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23819)
+Extracting RAM for identifier 'data_mem_grain7'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23833)
+Extracting RAM for identifier 'data_mem_grain8'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23847)
+Extracting RAM for identifier 'data_mem_grain9'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23861)
+Extracting RAM for identifier 'data_mem_grain10'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23875)
+Extracting RAM for identifier 'data_mem_grain11'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23889)
+Extracting RAM for identifier 'data_mem_grain12'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23903)
+Extracting RAM for identifier 'data_mem_grain13'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23917)
+Extracting RAM for identifier 'data_mem_grain14'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23931)
+Extracting RAM for identifier 'data_mem_grain15'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23945)
+WARN  (EX3791) : Expression size 2 truncated to fit in target size 1("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":7244)
+WARN  (EX3791) : Expression size 2 truncated to fit in target size 1("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":7275)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 28("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":9170)
+WARN  (EX3791) : Expression size 28 truncated to fit in target size 23("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":9237)
+WARN  (EX3791) : Expression size 104 truncated to fit in target size 8("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":10403)
+WARN  (EX3791) : Expression size 216 truncated to fit in target size 8("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":10747)
+WARN  (EX3791) : Expression size 152 truncated to fit in target size 8("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":11429)
+WARN  (EX3791) : Expression size 56 truncated to fit in target size 8("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12028)
+WARN  (EX3791) : Expression size 56 truncated to fit in target size 8("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12563)
+WARN  (EX3834) : Case condition never applies("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12854)
+WARN  (EX3834) : Case condition never applies("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12857)
+WARN  (EX3834) : Case condition never applies("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12860)
+WARN  (EX3834) : Case condition never applies("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12863)
+WARN  (EX3834) : Case condition never applies("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12866)
+WARN  (EX3834) : Case condition never applies("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":12869)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 4("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":14209)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 4("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":14239)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 30("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":14727)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 30("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":14741)
+WARN  (EX3791) : Expression size 30 truncated to fit in target size 14("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":14869)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":19576)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":19907)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":19909)
+Compiling module 'myperiph'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/myperiph.v":48)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/myperiph.v":79)
+WARN  (EX3670) : Actual bit length 1 differs from formal bit length 4 for port 'csr_addr'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23606)
+Compiling module 'sdr_periph'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/sdr_periph.v":12)
+Compiling module 'CIC'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/CIC.v":23)
+WARN  (EX3791) : Expression size 80 truncated to fit in target size 32("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/CIC.v":120)
+Compiling module 'SinCos'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/SinCos.v":1)
+Extracting RAM for identifier 'sin_lut'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/SinCos.v":34)
+Compiling module 'nco_sig'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/NCO.v":13)
+Compiling module 'pt8211_drive'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/pt8211_drive.v":2)
+WARN  (EX3670) : Actual bit length 1 differs from formal bit length 4 for port 'csr_sdr_addr'("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":23629)
+Compiling module 'VexRiscv'("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":7)
+Extracting RAM for identifier 'RegFilePlugin_regFile'("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":1154)
+Compiling module 'InstructionCache'("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":4626)
+Extracting RAM for identifier 'banks_0'("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":4732)
+Extracting RAM for identifier 'ways_0_tags'("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":4733)
+WARN  (EX1998) : Net 'IBusCachedPlugin_cache_io_cpu_fetch_isRemoved' does not have a driver("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":67)
+WARN  (EX1998) : Net 'IBusCachedPlugin_mmuBus_rsp_bypassTranslation' does not have a driver("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":515)
+WARN  (EX1998) : Net 'CsrPlugin_mtvec_mode[1]' does not have a driver("/home/alberto/socmel_1/pythondata-cpu-vexriscv/pythondata_cpu_vexriscv/verilog/VexRiscv_Lite.v":785)
+NOTE  (EX0101) : Current top module is "sipeed_tang_primer_20k"
+WARN  (EX0211) : The output port "TX" of module "sdr_periph" has no driver, assigning undriven bits to Z, simulation mismatch possible("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/sdr_periph.v":15)
+[5%] Running netlist conversion ...
+WARN  (CV0016) : Input eth_rx_er is unused("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.v":49)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "SinCos" instantiated to "SinCos_test_gen" is swept in optimizing("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/sdr_periph.v":176)
+WARN  (NL0002) : The module "nco_sig" instantiated to "nco_test_gen" is swept in optimizing("/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/sdr_periph/verilog/sdr_periph.v":191)
+[95%] Generate netlist file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/gwsynthesis/project.vg" completed
+[100%] Generate report file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/gwsynthesis/project_syn.rpt.html" completed
+GowinSynthesis finish
+Reading netlist file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/gwsynthesis/project.vg"
+Parsing netlist file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/gwsynthesis/project.vg" completed
+Processing netlist completed
+Reading constraint file: "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/sipeed_tang_primer_20k.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1132) :  'eth_clocks_ref_clk' was determined to be a clock but was not created.
+WARN  (TA1132) :  'sdr_HP_BCK_d' was determined to be a clock but was not created.
+WARN  (TA1132) :  'CLKDIV/CLKOUT.default_gen_clk' was determined to be a clock but was not created.
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/pnr/project.power.html" completed
+Generate file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/pnr/project.pin.html" completed
+Generate file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/pnr/project.rpt.html" completed
+Generate file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/pnr/project.rpt.txt" completed
+Generate file "/home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/gateware/impl/pnr/project.tr.html" completed
+Wed Sep 24 12:05:57 2025
+
+Generate the documentation by running `sphinx-build -M html /home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/doc/ /home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/doc/_build`
+identifier_mem@f0002800: Found memory that's 8 x 49 (but memories aren't documented yet)
+Sto eseguendo Sphinx v8.2.3
+caricamento traduzioni [en]... fatto
+loading pickled environment... fatto
+building [mo]: targets for 0 po files that are out of date
+writing output... 
+building [html]: targets for 12 source files that are out of date
+updating environment: 0 added, 12 changed, 0 removed
+reading sources... [  8%] ctrl
+reading sources... [ 17%] ddrphy
+reading sources... [ 25%] ethphy
+reading sources... [ 33%] identifier_mem
+reading sources... [ 42%] index
+reading sources... [ 50%] interrupts
+reading sources... [ 58%] myperiph
+reading sources... [ 67%] sdr_periph
+reading sources... [ 75%] sdram
+reading sources... [ 83%] spisdcard
+reading sources... [ 92%] timer0
+reading sources... [100%] uart
+
+looking for now-outdated files... none found
+pickling environment... fatto
+checking consistency... fatto
+preparing documents... fatto
+copying assets... 
+copying static files... 
+Writing evaluated template result to /home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/doc/_build/html/_static/documentation_options.js
+Writing evaluated template result to /home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/doc/_build/html/_static/language_data.js
+Writing evaluated template result to /home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/doc/_build/html/_static/basic.css
+Writing evaluated template result to /home/alberto/socmel_1/litex-boards/litex_boards/targets/test/build/sipeed_tang_primer_20k/doc/_build/html/_static/alabaster.css
+copying static files: fatto
+copying extra files... 
+copying extra files: fatto
+copying assets: fatto
+writing output... [  8%] ctrl
+writing output... [ 17%] ddrphy
+writing output... [ 25%] ethphy
+writing output... [ 33%] identifier_mem
+writing output... [ 42%] index
+writing output... [ 50%] interrupts
+writing output... [ 58%] myperiph
+writing output... [ 67%] sdr_periph
+writing output... [ 75%] sdram
+writing output... [ 83%] spisdcard
+writing output... [ 92%] timer0
+writing output... [100%] uart
+
+generating indices... genindex fatto
+writing additional pages... search fatto
+dumping search index in English (code: en)... fatto
+dumping object inventory... fatto
+build succeeded, 5 warnings.
+
+The HTML pages are in build/sipeed_tang_primer_20k/doc/_build/html.

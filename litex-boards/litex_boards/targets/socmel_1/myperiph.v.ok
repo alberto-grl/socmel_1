@@ -1,0 +1,32 @@
+module myperiph (
+    input  wire        clk,
+    input  wire [4:0]  btn_n,
+    output wire [5:0]  leds,
+
+    input  wire        csr_we,
+    input  wire [127:0] csr_wdata, // 4 registers x 32 bits
+    output reg  [127:0] csr_rdata, // 4 registers x 32 bits
+    input  wire [3:0]  csr_addr    // optional
+);
+
+    reg [31:0] reg0, reg1, reg2, reg3;
+
+    always @(posedge clk) begin
+        if (csr_we) begin
+            case (csr_addr)
+                4'd0: reg0 <= csr_wdata[31:0];
+                4'd1: reg1 <= csr_wdata[63:32];
+                4'd2: reg2 <= csr_wdata[95:64];
+                4'd3: reg3 <= csr_wdata[127:96];
+            endcase
+        end
+
+        csr_rdata[31:0]   <= btn_n;
+        csr_rdata[63:32]  <= reg1;
+        csr_rdata[95:64]  <= reg2;
+        csr_rdata[127:96] <= reg3;
+    end
+
+    assign leds = reg0[3:0];
+
+endmodule

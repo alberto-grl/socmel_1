@@ -1,0 +1,23 @@
+#!/bin/bash
+
+SESSION_NAME="LitexScripts"
+
+# Create session with first pane
+tmux new-session -d -s "$SESSION_NAME" bash
+
+# Configure first pane
+tmux send-keys -t "$SESSION_NAME:0.0" 'MakeSOC1.sh' C-a C-e
+
+# Split and configure second pane  
+tmux split-window -v -t "$SESSION_NAME" bash
+tmux send-keys -t "$SESSION_NAME:0.1" 'source ~/socmel_1/bin/activate && StartLitexTerm.sh' C-a C-e
+
+# Split and configure third pane
+tmux split-window -v -t "$SESSION_NAME" bash
+tmux send-keys -t "$SESSION_NAME:0.2" '~/socmel_1/litex-boards/litex_boards/targets/test/etherbone-scripts/jpg2lcd.py' C-a C-e
+
+# Set even layout
+tmux select-layout -t "$SESSION_NAME" even-vertical
+
+# Attach to session
+tmux attach -t "$SESSION_NAME"

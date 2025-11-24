@@ -1,0 +1,155 @@
+LVGL_DIR = /home/alberto/lvgl
+
+
+# ---------------------------------------------------------------------
+# RISC-V target ABI/ISA (adjust to your LiteX CPU variant)
+# Common for VexRiscv is rv32im with ilp32
+RISCV_MARCH = rv32im
+RISCV_ABI   = ilp32
+
+CFLAGS  += -march=$(RISCV_MARCH) -mabi=$(RISCV_ABI)
+LDFLAGS += -march=$(RISCV_MARCH) -mabi=$(RISCV_ABI) 
+
+CFLAGS  += -ffunction-sections -fdata-sections
+LDFLAGS += -Wl,--gc-sections -Wl,-s -Wl,-Map=firmware.map
+
+
+
+
+# ---------------------------------------------------------------------
+# Find the correct libgcc for this march/abi
+# LIBGCC := $(shell riscv64-unknown-elf-gcc -march=$(RISCV_MARCH) -mabi=$(RISCV_ABI) -print-libgcc-file-name)
+ LIBGCC_OBJDIR := libgcc_objs
+ LIBGCC_OBJS   := $(LIBGCC_OBJDIR)/_ffssi2.o
+# LIBGCC_OBJS += $(LIBGCC_OBJDIR)/_clzsi2.o
+
+# # Add extracted object to build
+ OBJECTS += $(LIBGCC_OBJS)
+
+
+
+
+# LVGL_SOURCES = $(wildcard $(LVGL_DIR)/src/*.c) \
+#                $(wildcard $(LVGL_DIR)/src/*/*.c) \
+#                $(wildcard $(LVGL_DIR)/src/*/*/*.c)
+
+
+# Collect all .c sources under lvgl/src (recursively)
+LVGL_SOURCES := $(shell find $(LVGL_DIR)/src -name "*.c")
+LVGL_OBJECTS := $(patsubst %.c, %.o, $(LVGL_SOURCES))
+
+
+#LVGL_OBJECTS = $(LVGL_SOURCES:.c=.o)
+OBJECTS += $(LVGL_OBJECTS)
+
+
+VPATH += $(sort $(dir $(LVGL_SOURCES)))
+	
+CFLAGS += -I/home/alberto/litex_venv/litex/litex/soc/software/my_c_test/demo
+
+
+LIBGCC := $(shell riscv64-unknown-elf-gcc -print-libgcc-file-name)
+
+#LIBGCC_OBJS += /home/alberto/litex_venv/litex/litex/soc/software/my_c_test/demo/libgcc_objs/_clzsi2.o
+LIBGCC_OBJS += /home/alberto/litex_venv/litex/litex/soc/software/my_c_test/demo/libgcc_objs/_ffssi2.o
+
+
+OBJECTS += $(LIBGCC_OBJS)
+
+# Rule: how to get _ffssi2.o
+# $(LIBGCC_OBJS):
+# 	mkdir -p libgcc_objs
+# 	cd libgcc_objs && ar x $(LIBGCC) _ffssi2.o
+
+
+CFLAGS += -I$(SOC_DIRECTORY)/software/include
+
+BUILD_DIR?=../build/
+
+include $(BUILD_DIR)/software/include/generated/variables.mak
+include $(SOC_DIRECTORY)/software/common.mak
+
+
+CFLAGS += -I$(LVGL_DIR) \
+          -I$(LVGL_DIR)/src \
+          -I$(LVGL_DIR)/src/core \
+          -I$(LVGL_DIR)/src/draw \
+          -I$(LVGL_DIR)/src/widgets \
+          -I$(LVGL_DIR)/src/display \
+          -I$(LVGL_DIR)/src/hal \
+          -I$(LVGL_DIR)/src/misc \
+          -I$(LVGL_DIR)/src/stdlib \
+          -I$(LVGL_DIR)/src/themes \
+          -I$(LVGL_DIR)/src/layouts
+CFLAGS += -DLV_CONF_INCLUDE_SIMPLE
+
+OBJECTS   += donut.o helloc.o crt0.o main.o 
+ifdef WITH_CXX
+	OBJECTS += hellocpp.o
+	CFLAGS += -DWITH_CXX
+endif
+
+
+$(info CFLAGS is set to: $(CFLAGS))
+
+all: demo.bin
+
+
+%.bin: %.elf
+	$(OBJCOPY) -O binary $< $@
+ifneq ($(OS),Windows_NT)
+	chmod -x $@
+endif
+
+vpath %.a $(PACKAGES:%=../%)
+
+demo.elf: $(OBJECTS)
+	$(CC) $(LDFLAGS) -T linker.ld -N -o $@ \
+		$(OBJECTS) \
+		$(PACKAGES:%=-L$(BUILD_DIR)/software/%) \
+		-Wl,--whole-archive \
+		-Wl,--gc-sections \
+		-Wl,-Map,$@.map \
+		$(LIBS:lib%=-l%) 
+
+ifneq ($(OS),Windows_NT)
+	chmod -x $@
+endif
+
+# pull in dependency info for *existing* .o files
+-include $(OBJECTS:.o=.d)
+
+donut.o: CFLAGS   += -w
+
+isr.o: /home/alberto/litex_venv/litex/litex/soc/software/libbase/isr.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+
+VPATH = $(BIOS_DIRECTORY):$(BIOS_DIRECTORY)/cmds:$(CPU_DIRECTORY)
+
+
+%.o: %.cpp
+	$(compilexx)
+
+%.o: %.c
+	$(compile) $(CFLAGS)
+
+%.o: %.S
+	$(assemble)
+
+clean:
+	$(RM) $(OBJECTS) demo.elf demo.bin .*~ *~
+
+.PHONY: all clean
+
+
+# Rule: extract _ffssi2.o from the right libgcc.a
+	LIBGCC_OBJS += $(LIBGCC_OBJDIR)/_ffssi2.o
+ $(LIBGCC_OBJS):
+	mkdir -p $(LIBGCC_OBJDIR)
+	cd $(LIBGCC_OBJDIR) && ar x $(LIBGCC) _ffssi2.o
+
+$(OUTPUT_FILE): $(OBJECTS)
+	$(CC) $(LDFLAGS) -o $@ $^ \
+	    -DLV_CONF_INCLUDE_SIMPLE -Wl,--start-group -lm -Wl,--end-group
+

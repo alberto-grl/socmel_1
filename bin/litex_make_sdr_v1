@@ -1,0 +1,27 @@
+#!/home/alberto/litex_venv/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+# 1. Remove the module and its parent packages from cache (if present)
+modules_to_remove = [
+    'litex.soc.software.socmel_1.sdr_v1',
+    'litex.soc.software.socmel_1',
+    'litex.soc.software',
+    'litex.soc',
+    'litex'
+]
+
+for mod in modules_to_remove:
+    if mod in sys.modules:
+        del sys.modules[mod]
+
+sys.path.insert(0, '/home/alberto/socmel_1/litex')  # e.g., /home/user/myproject
+
+from litex.soc.software.socmel_1.sdr_v1     import main
+import litex.soc.software.socmel_1.sdr_v1
+print("path:")
+print(litex.soc.software.socmel_1.sdr_v1.__file__)
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

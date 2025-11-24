@@ -1,0 +1,10 @@
+#!/bin/sh
+echo
+echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+echo "DOES NOT WORK! FIXME"
+echo "COMMANDS SENT BY HAND WORK OK, NOT IN SCRIPT"
+echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+cd /home/alberto/socmel_1/litex/litex/soc/software/socmel_1
+. /home/alberto/socmel_1/bin/activate
+~/self_socmel_1/bin/litex_make_sdr_v1 --build-path=/home/alberto/self_socmel_1/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1
+

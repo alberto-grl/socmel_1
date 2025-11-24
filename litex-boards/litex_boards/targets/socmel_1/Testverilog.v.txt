@@ -1,0 +1,20 @@
+module myperiph (
+    input clk,
+    input reset,
+    input cs,
+    input [31:0] datain,
+    output reg [31:0] dataout
+);
+    // Your peripheral logic here
+    reg [31:0] registers[0:15];
+    
+    always @(posedge clk) begin
+        if (reset) begin
+            // Reset logic
+        end else begin
+  
+            dataout <= -datain;
+        end
+    end
+ 
+endmodule
