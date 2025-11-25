@@ -1,0 +1,17 @@
+-d /home/alberto/socmel_1/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/gateware/impl/gwsynthesis/project.vg
+-p GW2A-18C-PBGA256-8
+-pn GW2A-LV18PG256C8/I7
+-cst /home/alberto/socmel_1/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/gateware/sipeed_tang_primer_20k_socmel_1.cst
+-cfg /home/alberto/socmel_1/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/gateware/impl/pnr/device.cfg
+-sdc /home/alberto/socmel_1/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/gateware/sipeed_tang_primer_20k_socmel_1.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-place_option 0
+-route_option 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

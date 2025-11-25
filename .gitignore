@@ -1,5 +1,4 @@
 **/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/doc
-**/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/sofware
-**/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/gateware
+**/litex-boards/litex_boards/targets/socmel_1/build/sipeed_tang_primer_20k_socmel_1/software
 *.pyc
 *.pyo

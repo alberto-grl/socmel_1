@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="sipeed_tang_primer_20k_socmel_1" Register="5110" Alu="776" Lut="6931" Bsram="37" Ssram="290" T_Register="9761(5110)" T_Alu="2811(776)" T_Lut="9967(6931)" T_MULT36X36="1(0)" T_ALU54D="1(0)" T_Bsram="43(37)" T_Ssram="322(290)">
+ <SubModule name="myperiph" Register="264" Alu="6" Lut="223" T_Register="264(264)" T_Alu="6(6)" T_Lut="223(223)"/>
+ <SubModule name="sdr_periph" Register="196" Alu="64" Lut="148" T_Register="3380(196)" T_Alu="1758(64)" T_Lut="838(148)" T_MULT36X36="1(0)" T_ALU54D="1(0)" T_Bsram="2(0)" T_Ssram="32(0)">
+  <SubModule name="CIC_Fliter_gw_cic_i" Register="1251" Alu="800" Lut="19" T_Register="1251(1251)" T_Alu="800(800)" T_Lut="19(19)"/>
+  <SubModule name="CIC_Fliter_gw_cic_Q" Register="1250" Alu="800" Lut="19" T_Register="1250(1250)" T_Alu="800(800)" T_Lut="19(19)"/>
+  <SubModule name="DDS_lo" Register="460" Alu="64" Lut="136" Bsram="1" T_Register="460(460)" T_Alu="64(64)" T_Lut="136(136)" T_Bsram="1(1)"/>
+  <SubModule name="Hilbert" Register="198" Alu="26" Lut="495" MULT36X36="1" ALU54D="1" Bsram="1" Ssram="32" T_Register="198(198)" T_Alu="26(26)" T_Lut="495(495)" T_MULT36X36="1(1)" T_ALU54D="1(1)" T_Bsram="1(1)" T_Ssram="32(32)"/>
+  <SubModule name="u_pt8211_drive_0" Register="25" Alu="4" Lut="21" T_Register="25(25)" T_Alu="4(4)" T_Lut="21(21)"/>
+ </SubModule>
+ <SubModule name="VexRiscv" Register="933" Alu="245" Lut="1929" Bsram="2" T_Register="1007(933)" T_Alu="271(245)" T_Lut="1975(1929)" T_Bsram="4(2)">
+  <SubModule name="IBusCachedPlugin_cache" Register="74" Alu="26" Lut="46" Bsram="2" T_Register="74(74)" T_Alu="26(26)" T_Lut="46(46)" T_Bsram="2(2)"/>
+ </SubModule>
+</Module>
